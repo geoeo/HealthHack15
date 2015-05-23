@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Nancy;
 using Nancy.ModelBinding;
 using Newtonsoft.Json;
@@ -15,9 +17,31 @@ namespace HealthSdkNancyServer
             Get["/"] = parameters => View["index"];
             Get["/status"] = _ => "I'm Alive!";
 
-            Post["/submitData"] = _ => ProcessSubmission();
+            Post["/submitData"] = _ =>
+            {
+                try
+                {
+                    return ProcessSubmission();
+                }
+                catch (Exception e)
+                {
+                    return e.Message;
+                }
+            };
 
             Get["/getDataForUser/{userId}"] = parameters => GetDataForUser(parameters.userId);
+
+            Get["/clearHistory"] = _ => DeleteHistory();
+        }
+
+        private dynamic DeleteHistory()
+        {
+            var emptyEventHistory = new Dictionary<int, List<EventEntry>>();
+            SaveEventHistory(emptyEventHistory);
+
+            return Negotiate
+                .WithStatusCode(HttpStatusCode.OK)
+                .WithModel("History Cleared.");
         }
 
         private dynamic GetDataForUser(int userId)
@@ -25,12 +49,24 @@ namespace HealthSdkNancyServer
             var eventHistory = LoadEventHistory();
 
             if (eventHistory.ContainsKey(userId))
-                return eventHistory[userId].ToArray();
-            return string.Format("Error: UserId: {0} not found", userId);
+            {
+                var eventEntries = eventHistory[userId].Where(e => !e.Seen).ToArray();
+                foreach (var eventEntry in eventEntries)
+                {
+                    eventEntry.Seen = true;
+                }
+
+                SaveEventHistory(eventHistory);
+
+                return eventEntries.ToArray();
+            }
+
+            return new EventEntry[0];
         }
 
         private dynamic ProcessSubmission()
         {
+
             var submissionDto = this.Bind<SubmissionDTO>();
 
             var eventHistory = LoadEventHistory();
@@ -58,34 +94,29 @@ namespace HealthSdkNancyServer
         private static void SaveEventHistory(Dictionary<int, List<EventEntry>> eventHistory)
         {
             var json = JsonConvert.SerializeObject(eventHistory, Formatting.Indented);
-            File.WriteAllText(FILE_NAME, json);
+            File.WriteAllText(GetFilePath(), json);
         }
 
         private static Dictionary<int, List<EventEntry>> LoadEventHistory()
         {
             var eventHistory = new Dictionary<int, List<EventEntry>>();
 
-            if (File.Exists(FILE_NAME))
+            var filePath = GetFilePath();
+
+            if (File.Exists(filePath))
             {
-                var file = File.ReadAllText(FILE_NAME);
+                var file = File.ReadAllText(filePath);
                 eventHistory =
                     (Dictionary<int, List<EventEntry>>)
                         JsonConvert.DeserializeObject(file, typeof (Dictionary<int, List<EventEntry>>));
             }
             return eventHistory;
         }
-    }
 
-    internal class SubmissionDTO
-    {
-        public int UserId { get; set; }
-        public int ApplicationId { get; set; }
-        public int EventId { get; set; }
-    }
-
-    internal class EventEntry
-    {
-        public int ApplicationId { get; set; }
-        public int EventId { get; set; }
+        private static string GetFilePath()
+        {
+            var filePath = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + FILE_NAME;
+            return filePath;
+        }
     }
 }

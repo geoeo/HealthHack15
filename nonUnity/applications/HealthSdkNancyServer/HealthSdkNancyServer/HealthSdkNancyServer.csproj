@@ -63,8 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="EventEntry.cs" />
     <Compile Include="IndexModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubmissionDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\index.sshtml">

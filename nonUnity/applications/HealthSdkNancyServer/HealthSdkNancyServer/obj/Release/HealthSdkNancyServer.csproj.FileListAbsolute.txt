@@ -8,3 +8,5 @@ C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\He
 C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Release\HealthSdkNancyServer.csprojResolveAssemblyReference.cache
 C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Release\HealthSdkNancyServer.dll
 C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Release\HealthSdkNancyServer.pdb
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Newtonsoft.Json.dll
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Newtonsoft.Json.xml
