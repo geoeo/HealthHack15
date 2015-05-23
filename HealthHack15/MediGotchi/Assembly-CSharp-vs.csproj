@@ -46,9 +46,27 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scrips\InputAccelerometer.cs" />
+     <Compile Include="Assets\Scripts\DebugDTO.cs" />
+     <Compile Include="Assets\Scripts\Receiver\EventReceiver.cs" />
+     <Compile Include="Assets\Scripts\Receiver\HealthDTO.cs" />
+     <Compile Include="Assets\Scripts\Receiver\HealthProcessor.cs" />
+     <Compile Include="Assets\Scripts\Receiver\IEventReceiver.cs" />
+     <Compile Include="Assets\Scripts\Receiver\IHealthDTO.cs" />
+     <Compile Include="Assets\Scripts\Receiver\LocalEventReceiver.cs" />
+     <Compile Include="Assets\Scripts\Receiver\Poller.cs" />
+     <Compile Include="Assets\Scripts\Sender\AccelerometerProcessor.cs" />
+     <Compile Include="Assets\Scripts\Sender\EventHandler.cs" />
+     <Compile Include="Assets\Scripts\Sender\IDataGenerator.cs" />
+     <Compile Include="Assets\Scripts\Sender\IEventHandler.cs" />
+     <Compile Include="Assets\Scripts\Sender\ISender.cs" />
+     <Compile Include="Assets\Scripts\Sender\InputAccelerometer.cs" />
+     <Compile Include="Assets\Scripts\Sender\LocalSender.cs" />
+     <Compile Include="Assets\Scripts\Sender\Sender.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/marchaubenstock/workspace/HealthHack15/MediGotchi/Assets/Dlls/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity_5/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

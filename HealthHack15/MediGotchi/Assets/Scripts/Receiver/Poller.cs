@@ -9,6 +9,9 @@ public class Poller : MonoBehaviour {
 	public event Action goodEvent;
 	
 	public event Action superEvent;
+	
+	float timeout = 5;
+	float currentTime = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -16,22 +19,26 @@ public class Poller : MonoBehaviour {
 		eventReceiver = this.gameObject.AddComponent<EventReceiver>();
 	}
 	
-	void processDataCallBack(HealthDTO polledDTO){
+	void processDataCallBack(HealthDTO[] polledDTOs){
 	
-		var receivedEvent = polledDTO.EventId;
+		foreach(HealthDTO dto in polledDTOs){	
+	
+			var receivedEvent = dto.EventId;
+			
+			switch(receivedEvent){
+				
+			case "1":
+				if(goodEvent != null)
+					goodEvent();
+				
+				break;
+			case "2":
+				if(superEvent != null)
+					superEvent();
+				
+				break;
+			}
 		
-		switch(receivedEvent){
-			
-		case "1":
-			if(goodEvent != null)
-				goodEvent();
-			
-			break;
-		case "2":
-			if(superEvent != null)
-				superEvent();
-			
-			break;
 		}
 		
 	}
@@ -39,10 +46,15 @@ public class Poller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-	
-		eventReceiver.Poll(processDataCallBack);
+		currentTime += Time.deltaTime;
 		
-	
+		if(currentTime >= timeout){
+			eventReceiver.Poll(processDataCallBack);
+			
+			currentTime = 0;
+		}
+		
+		
 //		if(polledDTO != null){
 //			var receivedEvent = polledDTO.getEvent();
 //			

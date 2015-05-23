@@ -8,7 +8,7 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 
 	const string DOMAIN = "http://healthsdk.azurewebsites.net/getdataforuser/1"; 
 
-	public void Poll(Action<HealthDTO> callback )
+	public void Poll(Action<HealthDTO[]> callback )
 	{
 	
 		var www = new WWW(DOMAIN);
@@ -18,7 +18,7 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 		
 	}
 	
-	IEnumerator receive(WWW www, Action<HealthDTO> callback){
+	IEnumerator receive(WWW www, Action<HealthDTO[]> callback){
 	
 	
 		yield return www;
@@ -28,7 +28,9 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 		{
 			Debug.Log("WWW Ok!: " + www.data);
 			
-			var healthDTO  = JsonConvert.DeserializeObject<HealthDTO>(www.data);
+			
+			
+			var healthDTO  = JsonConvert.DeserializeObject<HealthDTO[]>(www.data);
 			
 			callback(healthDTO);
 		} else {

@@ -13,8 +13,12 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 	public int eventThresholdGood;
 	public int eventThresholdSuper;
 	
+	public event Action changeEvent;
 	
 	IEventHandler eventHandler;
+	
+	float currentTime = 0;
+	float threshold = 2;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +38,9 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 	// Update is called once per frame
 	void FixedUpdate () {
 	
+		currentTime += Time.deltaTime;
+		
+	
 		var x_new = Input.acceleration.x;
 		var y_new = Input.acceleration.y;
 		var z_new = Input.acceleration.z;
@@ -49,6 +56,11 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 			if(!hasChanged){
 				hasChanged = true;
 				counter++;
+				if(currentTime > threshold){
+					changeEvent();
+					currentTime = 0;
+				}
+							
 			}
 			else {
 				hasChanged = false;

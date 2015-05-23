@@ -4,6 +4,6 @@ using System;
 
 public interface IEventReceiver {
 
-	void Poll(Action<HealthDTO> callback);
+	void Poll(Action<HealthDTO[]> callback);
 	
 }
