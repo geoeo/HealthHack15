@@ -5,8 +5,6 @@ C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\He
 C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Nancy.Hosting.Aspnet.dll
 C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Nancy.xml
 C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Nancy.Hosting.Aspnet.xml
-C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Debug\HealthSdkNancyServer.csprojResolveAssemblyReference.cache
-C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Debug\HealthSdkNancyServer.dll
-C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Debug\HealthSdkNancyServer.pdb
-C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Newtonsoft.Json.dll
-C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Newtonsoft.Json.xml
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Release\HealthSdkNancyServer.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Release\HealthSdkNancyServer.dll
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Release\HealthSdkNancyServer.pdb
