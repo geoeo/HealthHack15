@@ -15,7 +15,7 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 	
 	public event Action changeEvent;
 	
-	IEventHandler eventHandler;
+	public IEventHandler eventHandler = new EventHandler();
 	
 	float currentTime = 0;
 	float threshold = 2;
@@ -31,7 +31,7 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 		
 		hasChanged = false;
 		
-		eventHandler = new EventHandler(eventThresholdGood,eventThresholdSuper);
+		eventHandler.SetUp(eventThresholdGood,eventThresholdSuper);
 	
 	}
 	
@@ -56,8 +56,10 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 			if(!hasChanged){
 				hasChanged = true;
 				counter++;
+				
 				if(currentTime > threshold){
-					changeEvent();
+					if(changeEvent != null)
+						changeEvent();
 					currentTime = 0;
 				}
 							
