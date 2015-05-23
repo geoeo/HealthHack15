@@ -1,29 +1,19 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{CDCD976D-92B9-DC9B-C1BE-456144CE2BD5}") = "MediGotchi", "Assembly-CSharp-vs.csproj", "{B62A0AC8-B305-A5D6-FAD2-92EE6AE0265F}"
-EndProject
-Project("{CDCD976D-92B9-DC9B-C1BE-456144CE2BD5}") = "MediGotchi", "Assembly-CSharp-Editor-vs.csproj", "{8AFFE616-E641-7A16-2F68-83EF54F63CF5}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B62A0AC8-B305-A5D6-FAD2-92EE6AE0265F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B62A0AC8-B305-A5D6-FAD2-92EE6AE0265F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B62A0AC8-B305-A5D6-FAD2-92EE6AE0265F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B62A0AC8-B305-A5D6-FAD2-92EE6AE0265F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8AFFE616-E641-7A16-2F68-83EF54F63CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AFFE616-E641-7A16-2F68-83EF54F63CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AFFE616-E641-7A16-2F68-83EF54F63CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AFFE616-E641-7A16-2F68-83EF54F63CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-					GlobalSection(MonoDevelopProperties) = preSolution
+						GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

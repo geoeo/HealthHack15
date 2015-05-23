@@ -1,0 +1,10 @@
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\HealthSdkNancyServer.dll.config
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\HealthSdkNancyServer.dll
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\HealthSdkNancyServer.pdb
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Nancy.dll
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Nancy.Hosting.Aspnet.dll
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Nancy.xml
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\bin\Nancy.Hosting.Aspnet.xml
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Debug\HealthSdkNancyServer.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Debug\HealthSdkNancyServer.dll
+C:\Users\Marc\Documents\Healthhack\nonUnity\applications\HealthSdkNancyServer\HealthSdkNancyServer\obj\Debug\HealthSdkNancyServer.pdb

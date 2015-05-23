@@ -1,24 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.MediGotchi.CSharp", "UnityVS.MediGotchi.CSharp.csproj", "{5A5BD6FE-A973-54E9-145B-02F9A5A0FF13}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.MediGotchi.CSharp.Editor", "UnityVS.MediGotchi.CSharp.Editor.csproj", "{161B0692-4904-AFD4-F634-D21DCC3B3EA3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5A5BD6FE-A973-54E9-145B-02F9A5A0FF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A5BD6FE-A973-54E9-145B-02F9A5A0FF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A5BD6FE-A973-54E9-145B-02F9A5A0FF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A5BD6FE-A973-54E9-145B-02F9A5A0FF13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{161B0692-4904-AFD4-F634-D21DCC3B3EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{161B0692-4904-AFD4-F634-D21DCC3B3EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{161B0692-4904-AFD4-F634-D21DCC3B3EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{161B0692-4904-AFD4-F634-D21DCC3B3EA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
