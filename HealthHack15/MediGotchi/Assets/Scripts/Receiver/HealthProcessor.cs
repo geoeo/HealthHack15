@@ -4,16 +4,16 @@ using System;
 
 public class HealthProcessor : MonoBehaviour {
 
+	public GameObject eventSource;
+
 	// Use this for initialization
 	void Start () {
 	
-		var obj = new GameObject("HealthSDKProcessor");
-		var receiver = obj.AddComponent<Poller>();
+		var receiver = eventSource.GetComponent<Poller>();
 		
 		receiver.goodEvent += GoodEvent;	
 		receiver.superEvent += SuperEvent;
-		
-		
+			
 	
 	}
 	

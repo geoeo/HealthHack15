@@ -3,12 +3,12 @@ using System.Collections;
 
 public class AccelerometerProcessor : MonoBehaviour {
 
-	public GameObject input;
+	public GameObject eventSource;
 
 	// Use this for initialization
 	void Start () {
 	
-		var scraper = input.GetComponent<InputAccelerometer>();
+		var scraper = eventSource.GetComponent<InputAccelerometer>();
 		scraper.changeEvent += localAchievement;
 	
 	}

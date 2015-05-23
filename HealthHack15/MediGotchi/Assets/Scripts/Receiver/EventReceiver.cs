@@ -6,7 +6,7 @@ using System;
 public class EventReceiver : MonoBehaviour, IEventReceiver {
 
 
-	const string DOMAIN = "http://healthsdk.azurewebsites.net/getdataforuser/1"; 
+	const string DOMAIN = "http://healthsdk.azurewebsites.net/getdataforuser/123"; 
 
 	public void Poll(Action<HealthDTO[]> callback )
 	{
@@ -29,10 +29,10 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 			Debug.Log("WWW Ok!: " + www.data);
 			
 			
-			
 			var healthDTO  = JsonConvert.DeserializeObject<HealthDTO[]>(www.data);
 			
-			callback(healthDTO);
+			if(healthDTO.Length > 0)			
+				callback(healthDTO);
 		} else {
 			Debug.Log("WWW Error: "+ www.error);
 			
