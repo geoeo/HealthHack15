@@ -24,6 +24,12 @@ ModelImporter:
     100032: UpperArmR_joint1
     100034: UpperLegL_joint
     100036: UpperLegR_joint
+    100038: jaw_anchor
+    100040: l_corner
+    100042: Lowerjaw_joint
+    100044: r_corner
+    100046: upperjaw_anchor
+    100048: Upperjaw_joint
     400000: FootL_joint
     400002: FootR_joint
     400004: handL_joint
@@ -43,7 +49,14 @@ ModelImporter:
     400032: UpperArmR_joint1
     400034: UpperLegL_joint
     400036: UpperLegR_joint
+    400038: jaw_anchor
+    400040: l_corner
+    400042: Lowerjaw_joint
+    400044: r_corner
+    400046: upperjaw_anchor
+    400048: Upperjaw_joint
     4300000: MediGotchi_mesh
+    7400000: Take 001
     9500000: //RootNode
     13700000: MediGotchi_mesh
   materials:
