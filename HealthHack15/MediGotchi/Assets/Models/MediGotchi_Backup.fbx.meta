@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: a066ce4e740269c4e9052210de74b5dd
+timeCreated: 1432410076
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: FootL_joint
+    100002: FootR_joint
+    100004: handL_joint
+    100006: handR_joint
+    100008: Head_joint
+    100010: jaw_anchor
+    100012: l_corner
+    100014: LowerArmL_joint
+    100016: LowerArmR_joint
+    100018: Lowerjaw_joint
+    100020: LowerLegL_joint
+    100022: LowerLegR_joint
+    100024: //RootNode
+    100026: MediGotchi_mesh
+    100028: Neck_joint
+    100030: r_corner
+    100032: Spine_joint1
+    100034: Spine_joint2
+    100036: Spine_joint3
+    100038: UpperArmL_joint
+    100040: UpperArmR_joint1
+    100042: upperjaw_anchor
+    100044: Upperjaw_joint
+    100046: UpperLegL_joint
+    100048: UpperLegR_joint
+    400000: FootL_joint
+    400002: FootR_joint
+    400004: handL_joint
+    400006: handR_joint
+    400008: Head_joint
+    400010: jaw_anchor
+    400012: l_corner
+    400014: LowerArmL_joint
+    400016: LowerArmR_joint
+    400018: Lowerjaw_joint
+    400020: LowerLegL_joint
+    400022: LowerLegR_joint
+    400024: //RootNode
+    400026: MediGotchi_mesh
+    400028: Neck_joint
+    400030: r_corner
+    400032: Spine_joint1
+    400034: Spine_joint2
+    400036: Spine_joint3
+    400038: UpperArmL_joint
+    400040: UpperArmR_joint1
+    400042: upperjaw_anchor
+    400044: Upperjaw_joint
+    400046: UpperLegL_joint
+    400048: UpperLegR_joint
+    4300000: MediGotchi_mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: MediGotchi_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
