@@ -10,7 +10,7 @@ public class Poller : MonoBehaviour {
 	
 	public event Action superEvent;
 	
-	float timeout = 5;
+	float timeout = 2;
 	float currentTime = 0;
 
 	// Use this for initialization

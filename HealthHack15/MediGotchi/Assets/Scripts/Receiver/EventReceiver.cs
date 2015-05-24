@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Newtonsoft.Json;
 using System;
+using Newtonsoft.Json;
 
 public class EventReceiver : MonoBehaviour, IEventReceiver {
 
 
 	const string DOMAIN = "http://healthsdk.azurewebsites.net/getdataforuser/123"; 
+		
 
 	public void Poll(Action<HealthDTO[]> callback )
 	{
