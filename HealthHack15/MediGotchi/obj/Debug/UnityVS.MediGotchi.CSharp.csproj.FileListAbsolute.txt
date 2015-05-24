@@ -1,0 +1,15 @@
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\JsonFx.dll
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\Temp\UnityVS_bin\Debug\JsonFx.xml
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\obj\Debug\UnityVS.MediGotchi.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\obj\Debug\Assembly-CSharp.dll
+C:\Users\Marc\Documents\Healthhack\HealthHack15\MediGotchi\obj\Debug\Assembly-CSharp.pdb
