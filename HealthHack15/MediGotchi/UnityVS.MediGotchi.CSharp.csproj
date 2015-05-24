@@ -54,15 +54,33 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
+    <Reference Include="JsonFx">
+      <HintPath>Assets\Dlls\JsonFx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scrips\InputAccelerometer.cs" />
+    <Compile Include="Assets\Scripts\DebugDTO.cs" />
+    <Compile Include="Assets\Scripts\Receiver\EventReceiver.cs" />
+    <Compile Include="Assets\Scripts\Receiver\HealthDTO.cs" />
+    <Compile Include="Assets\Scripts\Receiver\HealthProcessor.cs" />
+    <Compile Include="Assets\Scripts\Receiver\IEventReceiver.cs" />
+    <Compile Include="Assets\Scripts\Receiver\IHealthDTO.cs" />
+    <Compile Include="Assets\Scripts\Receiver\LocalEventReceiver.cs" />
+    <Compile Include="Assets\Scripts\Receiver\Poller.cs" />
+    <Compile Include="Assets\Scripts\Sender\AccelerometerProcessor.cs" />
+    <Compile Include="Assets\Scripts\Sender\EventHandler.cs" />
+    <Compile Include="Assets\Scripts\Sender\IDataGenerator.cs" />
+    <Compile Include="Assets\Scripts\Sender\IEventHandler.cs" />
+    <Compile Include="Assets\Scripts\Sender\ISender.cs" />
+    <Compile Include="Assets\Scripts\Sender\InputAccelerometer.cs" />
+    <Compile Include="Assets\Scripts\Sender\LocalSender.cs" />
+    <Compile Include="Assets\Scripts\Sender\Sender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Dlls\JsonFx.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

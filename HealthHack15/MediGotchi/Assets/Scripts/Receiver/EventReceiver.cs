@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Newtonsoft.Json;
 using System;
+using JsonFx.Json;
+
 
 public class EventReceiver : MonoBehaviour, IEventReceiver {
 
@@ -10,12 +11,8 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 
 	public void Poll(Action<HealthDTO[]> callback )
 	{
-	
 		var www = new WWW(DOMAIN);
-		
 		StartCoroutine(receive(www,callback));
-		
-		
 	}
 	
 	IEnumerator receive(WWW www, Action<HealthDTO[]> callback){
@@ -26,13 +23,14 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 		// check for errors
 		if (www.error == null)
 		{
-			Debug.Log("WWW Ok!: " + www.data);
+			Debug.Log("WWW Ok!: " + www.text);
 			
+            var reader = new JsonReader();
+
+            var healthDtos = reader.Read<HealthDTO[]>(www.text);
 			
-			var healthDTO  = JsonConvert.DeserializeObject<HealthDTO[]>(www.data);
-			
-			if(healthDTO.Length > 0)			
-				callback(healthDTO);
+			if(healthDtos.Length > 0)			
+				callback(healthDtos);
 		} else {
 			Debug.Log("WWW Error: "+ www.error);
 			
