@@ -29,10 +29,12 @@ public class HealthProcessor : MonoBehaviour {
 	public void GoodEvent(){
 	
 		print ("GoodEvent");
+		
 		Flappy.XSpeed = mStartSpeed * 1.5f;
 		mAnimator.SetBool("super", true);
 		var booster = Instantiate(Booster, Flappy.transform.position, Quaternion.identity) as GameObject;
 		booster.transform.parent = Flappy.transform;
+		
 	
 	}
 	
