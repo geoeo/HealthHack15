@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Deeplinker.cs" />
      <Compile Include="Assets\Scripts\DebugDTO.cs" />
      <Compile Include="Assets\Scripts\LocalAchievement.cs" />
+     <Compile Include="Assets\Scripts\MediGotchi\GameManager.cs" />
      <Compile Include="Assets\Scripts\Receiver\EventReceiver.cs" />
      <Compile Include="Assets\Scripts\Receiver\HealthDTO.cs" />
      <Compile Include="Assets\Scripts\Receiver\HealthProcessor.cs" />

@@ -18,7 +18,7 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 	public IEventHandler eventHandler = new EventHandler();
 	
 	float currentTime = 0;
-	float threshold = 2;
+	float threshold = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -51,7 +51,7 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 		
 		old_value /= old_value_sqrt * new_value_sqrt;
 		
-		if((old_value > 0.992) &&(old_value <= 0.994))
+		if((old_value > 0.987) &&(old_value <= 0.994))
 		{
 			if(!hasChanged){
 				hasChanged = true;

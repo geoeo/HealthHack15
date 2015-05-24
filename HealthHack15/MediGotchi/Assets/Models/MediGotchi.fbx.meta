@@ -56,7 +56,7 @@ ModelImporter:
     400046: upperjaw_anchor
     400048: Upperjaw_joint
     4300000: MediGotchi_mesh
-    7400000: Take 001
+    7400000: Idle01
     9500000: //RootNode
     13700000: MediGotchi_mesh
   materials:
@@ -68,13 +68,89 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle01
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 111
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MediGotchi_mesh
+        weight: 1
+      - path: Spine_joint1
+        weight: 1
+      - path: Spine_joint1/Spine_joint2
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint/Head_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint/Head_joint/jaw_anchor
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint/Head_joint/jaw_anchor/Lowerjaw_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint/Head_joint/l_corner
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint/Head_joint/r_corner
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint/Head_joint/upperjaw_anchor
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/Neck_joint/Head_joint/upperjaw_anchor/Upperjaw_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/UpperArmL_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/UpperArmL_joint/LowerArmL_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/UpperArmL_joint/LowerArmL_joint/handL_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/UpperArmR_joint1
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/UpperArmR_joint1/LowerArmR_joint
+        weight: 1
+      - path: Spine_joint1/Spine_joint2/Spine_joint3/UpperArmR_joint1/LowerArmR_joint/handR_joint
+        weight: 1
+      - path: Spine_joint1/UpperLegL_joint
+        weight: 1
+      - path: Spine_joint1/UpperLegL_joint/LowerLegL_joint
+        weight: 1
+      - path: Spine_joint1/UpperLegL_joint/LowerLegL_joint/FootL_joint
+        weight: 1
+      - path: Spine_joint1/UpperLegR_joint
+        weight: 1
+      - path: Spine_joint1/UpperLegR_joint/LowerLegR_joint
+        weight: 1
+      - path: Spine_joint1/UpperLegR_joint/LowerLegR_joint/FootR_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
