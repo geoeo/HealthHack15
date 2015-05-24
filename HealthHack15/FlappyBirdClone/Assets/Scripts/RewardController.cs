@@ -23,7 +23,7 @@ public class RewardController : MonoBehaviour
         }
     }
 
-    void ActivateReward()
+    public void ActivateReward()
     {
         Flappy.XSpeed = mStartSpeed * 1.5f;
         mAnimator.SetBool("super", true);

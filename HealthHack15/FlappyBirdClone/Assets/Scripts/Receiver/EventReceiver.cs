@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Newtonsoft.Json;
 using System;
-using JsonFx.Json;
 
 public class EventReceiver : MonoBehaviour, IEventReceiver {
 
 
 	const string DOMAIN = "http://healthsdk.azurewebsites.net/getdataforuser/123"; 
-		
 
 	public void Poll(Action<HealthDTO[]> callback )
 	{
+	
 		var www = new WWW(DOMAIN);
+		
 		StartCoroutine(receive(www,callback));
+		
+		
 	}
 	
 	IEnumerator receive(WWW www, Action<HealthDTO[]> callback){
@@ -23,14 +26,13 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 		// check for errors
 		if (www.error == null)
 		{
-			Debug.Log("WWW Ok!: " + www.text);
+			Debug.Log("WWW Ok!: " + www.data);
 			
-            var reader = new JsonReader();
-
-            var healthDtos = reader.Read<HealthDTO[]>(www.text);
 			
-			if(healthDtos.Length > 0)			
-				callback(healthDtos);
+			var healthDTO  = JsonConvert.DeserializeObject<HealthDTO[]>(www.data);
+			
+			if(healthDTO.Length > 0)			
+				callback(healthDTO);
 		} else {
 			Debug.Log("WWW Error: "+ www.error);
 			
