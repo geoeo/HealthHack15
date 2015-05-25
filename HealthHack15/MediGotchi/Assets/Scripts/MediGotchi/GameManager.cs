@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     
     int mStepCounter;
 
-    int BAR_MAX = 50;
+    int BAR_MAX = 25;
     public float BAR_LEFT = -0.5f;
     Vector3 mBarCenter;
 

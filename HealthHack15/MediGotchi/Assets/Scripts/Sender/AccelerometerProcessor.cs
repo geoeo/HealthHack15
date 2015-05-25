@@ -9,9 +9,14 @@ public class AccelerometerProcessor : MonoBehaviour {
 	
 	public GameObject localAchievement;
 	
-	float currentTime = 0;
+	public Animator animator;
 	
-	float timeout = 15;
+	float currentTime_ui = 0;
+	float currentTime_anim = 0;
+	
+	float ui_timeout = 25;
+	
+	float animator_timeout = 2;
 	
 	GameManager gm;
 
@@ -21,6 +26,7 @@ public class AccelerometerProcessor : MonoBehaviour {
 	
 		var scraper = eventSource.GetComponent<InputAccelerometer>();
 		scraper.changeEvent += localProgress;
+		scraper.noChangeEvent += triggerAction;
 		
 		scraper.eventHandler.goodEvent += localGoodAchievement;
 		scraper.eventHandler.superEvent += localSuperAchievement;
@@ -34,9 +40,15 @@ public class AccelerometerProcessor : MonoBehaviour {
 		
 		gm.trigger();
 		
+		if(!animator.GetBool("moving"));
+			animator.SetBool("moving",true);
+		
 	}
 	
 	public void localGoodAchievement(){
+	
+		animator.SetBool("moving",false);
+		animator.SetBool ("happy",true);
 		
 		print("local good!");
 		
@@ -52,13 +64,25 @@ public class AccelerometerProcessor : MonoBehaviour {
 		print("local super!");
 	}
 	
+	public void triggerAction(){
+		animator.SetTrigger("action");
+	}
+	
 	void Update(){
 	
-		currentTime += Time.deltaTime;
 		
-		if(currentTime > timeout){
+	
+		currentTime_ui += Time.deltaTime;
+		currentTime_anim += Time.deltaTime;
+		
+		if(currentTime_ui > ui_timeout){
 			localAchievement.SetActive(false);
-			currentTime = 0;
+			currentTime_ui = 0;
+		}
+		
+		if(currentTime_anim > animator_timeout && animator.GetBool("moving")){
+			animator.SetBool("moving",false);
+			currentTime_anim = 0;
 		}
 	
 	

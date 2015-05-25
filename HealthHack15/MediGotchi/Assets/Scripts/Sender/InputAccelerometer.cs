@@ -15,10 +15,12 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 	
 	public event Action changeEvent;
 	
+	public event Action noChangeEvent;
+	
 	public IEventHandler eventHandler = new EventHandler();
 	
 	float currentTime = 0;
-	float threshold = 0.0f;
+	float threshold = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +40,6 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 	// Update is called once per frame
 	void FixedUpdate () {
 	
-		currentTime += Time.deltaTime;
 		
 	
 		var x_new = Input.acceleration.x;
@@ -51,21 +52,22 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 		
 		old_value /= old_value_sqrt * new_value_sqrt;
 		
-		if((old_value > 0.987) &&(old_value <= 0.994))
+		if((old_value > 0.989) &&(old_value <= 0.994))
 		{
 			if(!hasChanged){
 				hasChanged = true;
 				counter++;
 				
-				if(currentTime > threshold){
+				//if(currentTime > threshold){
 					if(changeEvent != null)
 						changeEvent();
 					currentTime = 0;
-				}
+				//}
 							
 			}
 			else {
 				hasChanged = false;
+
 			}
 		}
 		
@@ -84,5 +86,23 @@ public class InputAccelerometer : MonoBehaviour, IDataGenerator {
 	public void Reset()
 	{
 		counter = 0;
+	}
+	
+	void Update(){
+	
+		currentTime += Time.deltaTime;
+	
+		var number = UnityEngine.Random.Range(1f,10f);
+		
+		
+		if(currentTime > threshold){
+		
+			if(number > 7 && noChangeEvent != null){
+				noChangeEvent();
+			}
+			
+			currentTime = 0;
+		
+		}
 	}
 }
