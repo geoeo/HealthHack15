@@ -97,6 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSource: {fileID: 129190}
+  localEvent: {fileID: 0}
+  localAchievement: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &11412668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  eventThresholdGood: 50
+  eventThresholdGood: 25
   eventThresholdSuper: 200
 --- !u!1001 &100100000
 Prefab:
