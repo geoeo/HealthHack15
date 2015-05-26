@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using JsonFx.Json;
+using Pathfinding.Serialization.JsonFx;
 
 public class EventReceiver : MonoBehaviour, IEventReceiver {
 
@@ -24,10 +24,8 @@ public class EventReceiver : MonoBehaviour, IEventReceiver {
 		if (www.error == null)
 		{
 			Debug.Log("WWW Ok!: " + www.text);
-			
-            var reader = new JsonReader();
 
-            var healthDtos = reader.Read<HealthDTO[]>(www.text);
+            var healthDtos = JsonReader.Deserialize<HealthDTO[]>(www.text);
 			
 			if(healthDtos.Length > 0)			
 				callback(healthDtos);
