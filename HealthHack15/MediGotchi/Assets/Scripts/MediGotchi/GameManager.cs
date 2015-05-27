@@ -52,4 +52,11 @@ public class GameManager : MonoBehaviour
         var barPos = ProgressBar.localPosition;
         ProgressBar.localPosition = new Vector3(BAR_LEFT * (progress - 1), barPos.y, barPos.z);
     }
+
+	public void OnAchievementButtonClick()
+	{
+		var url = "HDKFlappyHack://";
+		Application.OpenURL(url);
+		Debug.Log (string.Format ("opened url: {0}", url));
+	}
 }

@@ -14,9 +14,9 @@ public class AccelerometerProcessor : MonoBehaviour {
 	float currentTime_ui = 0;
 	float currentTime_anim = 0;
 	
-	float ui_timeout = 25;
+	float ui_timeout = 60;
 	
-	float animator_timeout = 2;
+	float animator_timeout = 6;
 	
 	GameManager gm;
 
@@ -53,6 +53,7 @@ public class AccelerometerProcessor : MonoBehaviour {
 		print("local good!");
 		
 		localAchievement.SetActive(true);
+
 		
 		gm.Set(200);
 				
@@ -70,15 +71,13 @@ public class AccelerometerProcessor : MonoBehaviour {
 	
 	void Update(){
 	
-		
-	
 		currentTime_ui += Time.deltaTime;
 		currentTime_anim += Time.deltaTime;
 		
-		if(currentTime_ui > ui_timeout){
-			localAchievement.SetActive(false);
-			currentTime_ui = 0;
-		}
+		//if(currentTime_ui > ui_timeout){
+		//	localAchievement.SetActive(false);
+		//	currentTime_ui = 0;
+		//}
 		
 		if(currentTime_anim > animator_timeout && animator.GetBool("moving")){
 			animator.SetBool("moving",false);

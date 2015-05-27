@@ -9,7 +9,8 @@ public class LocalAchievement : MonoBehaviour {
 	void Start () {
 	
 		achievement.SetActive(true);
-	
+
+
 	}
 	
 	// Update is called once per frame
